@@ -1,0 +1,5 @@
+Name: Artiom Stoliarov
+Number: 700091
+Class: IT-1B
+URL: denthekir3.github.io
+Repository: https://github.com/denthekir/denthekir2.github.io
