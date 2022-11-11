@@ -1,0 +1,178 @@
+@import url("https://fonts.googleapis.com/css?family=Notable");
+body
+{
+    background-color: rgb(255, 166, 0);
+    background-image: url("../img/background-alpha.png");
+    background-repeat: repeat;
+
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+}
+h1
+{
+    font-family: Notable;
+    letter-spacing: 0.1em;
+}
+.logotype
+{
+    height: 170px;
+    width: auto;
+    margin-top: 10px;
+}
+.h1-and-checkbox
+{
+    display: flex;
+    justify-content: space-between;
+}
+.hamburger
+{
+    display:none;
+}
+h1
+{
+    margin: 0;
+    padding-top: 1vh;
+    padding-bottom: 1vh;
+}
+h2
+{
+    margin-bottom: 0;
+    padding-bottom: 1vh;
+}
+.highest-header
+{
+    background-color: #000000f0;
+    color:silver;
+    width: 100%;
+}
+.regular-nav-list
+{
+    margin: 0;
+    display: flex;
+    padding-left: 0;
+    list-style: none;
+    justify-content: space-around;
+    
+}
+.regular-nav
+{
+    background-color: #202020f0;
+    padding-top: 1em;
+    padding-bottom: 1em;
+}
+.hamburger-nav
+{
+    display: flex;
+    justify-content: center;
+}
+.hamburger
+{
+    z-index: 2;
+}
+.navigation-links, .hamburger
+{
+    font-size: 1.3em;
+    text-decoration: none;
+    color:silver;
+}
+.navigation-links:hover
+{
+    color:white;
+}
+#cookie-statement
+{
+    position: fixed;
+    text-align: center;
+    right: 0;
+    bottom: 0;
+    color:#FFF;
+    opacity: 0.5;
+    background-color: #FA0;
+    padding: 1em;
+    z-index: 9999;
+}
+#bottom-footer
+{
+    color: #ffc14f;
+    background-color: #360505;
+    padding: 1vh 1vh 1vh 0;
+    margin-top: 10px;
+}
+.nav-block
+{
+    visibility: hidden; /*this way it also works as a some space before content*/
+}
+.toggler
+{
+    visibility: hidden;
+}
+@media (max-width: 480px)
+{
+        /*mobile nav*/
+        .nav-block
+        {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            height: auto;
+            visibility: visible;
+            flex-basis: 100%;
+        }
+        .ul-block
+        {
+            display: none;
+            list-style-type: none;
+            text-align: center;
+            padding-left: 0;
+            margin-top: 0;
+        }
+        .li-block
+        {
+            padding-top: 10px;
+            padding-bottom: 10px;
+        }
+        .toggler
+        {
+            position:absolute;
+            top:0;
+            right: 0;
+            visibility: visible;
+            width: 50px;
+            height: 50px;
+            opacity: 0;
+            z-index: 2;
+        }
+        .toggler:checked~ .ul-block
+        {
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            background-color: #2e2e2e;
+            color: #c0c0c0;
+            text-transform: uppercase;
+        }
+        .hamburger
+        {
+            display:block;
+            font-size: 3em;
+            flex-basis: 60px;
+            z-index: 1;
+        }
+        /*end of mob nav*/
+        .logotype
+        {
+            display: none;
+        }
+        .regular-nav
+        {
+            display: none;
+        }
+        h1
+        {
+            font-size: 1.5em;
+        }
+        h2
+        {
+            font-size: 1em;
+        }
+}

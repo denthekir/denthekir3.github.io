@@ -1,0 +1,123 @@
+main
+{
+    display: grid;
+    grid-gap: 20px;
+    grid-template-areas: 
+    "grid-sections"
+    "grid-aside";
+}
+#grid-section
+{
+    display: grid;
+    grid-gap: 20px;
+    grid-template-areas:
+    "article2 article1 article3"
+    "article2 article1 article3"
+    "article5 article1 article3"
+    "article5 article1 article4"
+    "article5 article1 article4"
+    "article5 article1 article4"
+    "article5 article6 article6";
+    margin-left: 2vw;
+    margin-right: 2vw;
+}
+.aside-grid
+{
+    background-color: #2e2e2eb9;
+    display: grid;
+    grid-template-areas: "figure1 figure2 figure3";
+    grid-gap: 4vw;
+    padding-top: 2vh;
+    padding-bottom: 2vh;
+}
+#first-figure {grid-area: figure1;}
+#second-figure {grid-area: figure2;}
+#third-figure {grid-area: figure3;}
+figure
+{
+    margin: auto;
+}
+img
+{
+    width: 23vw;
+    height: auto;
+}
+figcaption
+{
+    padding-left: 5px;
+    color:#c0c0c0;
+    text-align: center;
+}
+.grid-item
+{
+    background-color: #2e2e2e;
+    color:#c0c0c0;
+    box-sizing: border-box;
+    border-top: 0.7rem double #FFC72B; /*using a mandatory color */
+    display: grid;
+}
+h3
+{
+    text-align: center;
+}
+p
+{
+    padding: 0 0.8vw 0.8vw 0.8vw ;
+    text-align: center;
+    vertical-align: text-bottom;
+}
+#grid-1{grid-area: article1;}
+#grid-2{grid-area: article2;}
+#grid-3{grid-area: article3;}
+#grid-4{grid-area: article4;}
+#grid-5{grid-area: article5;}
+#grid-6{grid-area: article6;}
+
+@media ((min-width: 481px) and (max-width: 1279px))
+{
+    #grid-section
+    {
+    grid-gap: 15px;
+    grid-template-areas:
+    "article1 article2"
+    "article1 article2"
+    "article3 article2"
+    "article3 article5"
+    "article3 article5"
+    "article3 article5"
+    "article6 article6"
+    "article6 article6";
+    }
+    #grid-4{display: none;}
+    .aside-grid
+    {
+    grid-template-areas: "figure1 figure2";
+    }
+    #third-figure {display: none;}
+}
+@media (max-width: 480px)
+{
+    #grid-section
+    {
+    grid-gap: 15px;
+    grid-template-areas:
+    "article5"
+    "article3"
+    "article2"
+    "article1";
+    }
+    #grid-4{display: none;}
+    #grid-6{display: none;}
+
+    .aside-grid
+    {
+    grid-template-areas: 
+    "figure1"
+    "figure2"
+    "figure3";
+    }
+    main
+    {
+        margin-top: 5px;
+    }
+}

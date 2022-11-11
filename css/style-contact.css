@@ -1,0 +1,76 @@
+.contact
+{
+    /*display: grid;
+    grid-template-areas: 
+    "contact-form aside-pictures" ;*/
+    display: flex;
+    justify-content: space-between;
+}
+.aside-flex
+{
+    /*grid-area:aside-pictures;*/
+    box-sizing: border-box;
+    border: 5px black double;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: #2e2e2eb9;
+}
+img
+{
+    width: 18vw;
+    height: auto;
+}
+.image-link
+{
+    display: flex;
+    justify-content: center;
+}
+form
+{
+    /*rid-area: contact-form;*/
+    flex-basis: 100%;
+}
+figcaption
+{
+    color:#c0c0c0;
+    text-align: center;
+}
+#contact-info
+{
+    background-color: #2e2e2eb9;
+    margin-bottom: 60px;
+    font-size: 1.4em;
+    color:#c0c0c0;
+    text-align: center;
+    padding: 15px 30px;
+}
+@media ((min-width: 481px) and (max-width: 1279px))
+{
+    form
+    {
+        flex-basis: 66%;
+    }
+    .aside-flex
+    {
+        flex-basis: 33%
+    }
+}
+@media (max-width: 480px)
+{
+    main
+    {
+        flex-direction: column;
+    }
+    .aside-flex
+    {
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+    #contact-info
+    {
+        font-size: 1rem;
+        margin-top: 10px;
+    }
+    /*on a template all the items in the aside is a column, so I left it as a column*/
+}
